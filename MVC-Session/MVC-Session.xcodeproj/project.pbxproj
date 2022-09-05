@@ -14,8 +14,10 @@
 		AB5B03E228C3449C00FBBB32 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB5B03E128C3449C00FBBB32 /* Assets.xcassets */; };
 		AB5B03E528C3449C00FBBB32 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB5B03E328C3449C00FBBB32 /* LaunchScreen.storyboard */; };
 		AB5B03F428C5124400FBBB32 /* PhoneData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5B03F328C5124400FBBB32 /* PhoneData.swift */; };
-		AB5B03F628C5132C00FBBB32 /* PhoneDataListTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5B03F528C5132C00FBBB32 /* PhoneDataListTableView.swift */; };
 		AB5B03F828C51DE600FBBB32 /* PhoneBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5B03F728C51DE600FBBB32 /* PhoneBook.swift */; };
+		AB5B03FA28C5759900FBBB32 /* AddDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5B03F928C5759900FBBB32 /* AddDataViewController.swift */; };
+		AB5B03FC28C5790600FBBB32 /* PhoneDataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5B03FB28C5790600FBBB32 /* PhoneDataTableViewCell.swift */; };
+		AB5B03FE28C66DF200FBBB32 /* MainFloatingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5B03FD28C66DF200FBBB32 /* MainFloatingButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,8 +30,10 @@
 		AB5B03E428C3449C00FBBB32 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AB5B03E628C3449C00FBBB32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB5B03F328C5124400FBBB32 /* PhoneData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneData.swift; sourceTree = "<group>"; };
-		AB5B03F528C5132C00FBBB32 /* PhoneDataListTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneDataListTableView.swift; sourceTree = "<group>"; };
 		AB5B03F728C51DE600FBBB32 /* PhoneBook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneBook.swift; sourceTree = "<group>"; };
+		AB5B03F928C5759900FBBB32 /* AddDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDataViewController.swift; sourceTree = "<group>"; };
+		AB5B03FB28C5790600FBBB32 /* PhoneDataTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneDataTableViewCell.swift; sourceTree = "<group>"; };
+		AB5B03FD28C66DF200FBBB32 /* MainFloatingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainFloatingButton.swift; path = "MVC-Session/View/MainFloatingButton.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				AB5B03DC28C3449A00FBBB32 /* PhoneBookViewController.swift */,
+				AB5B03F928C5759900FBBB32 /* AddDataViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -95,7 +100,8 @@
 			isa = PBXGroup;
 			children = (
 				AB5B03DE28C3449A00FBBB32 /* Main.storyboard */,
-				AB5B03F528C5132C00FBBB32 /* PhoneDataListTableView.swift */,
+				AB5B03FB28C5790600FBBB32 /* PhoneDataTableViewCell.swift */,
+				AB5B03FD28C66DF200FBBB32 /* MainFloatingButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -171,11 +177,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB5B03FE28C66DF200FBBB32 /* MainFloatingButton.swift in Sources */,
 				AB5B03F428C5124400FBBB32 /* PhoneData.swift in Sources */,
 				AB5B03DD28C3449A00FBBB32 /* PhoneBookViewController.swift in Sources */,
-				AB5B03F628C5132C00FBBB32 /* PhoneDataListTableView.swift in Sources */,
 				AB5B03D928C3449A00FBBB32 /* AppDelegate.swift in Sources */,
+				AB5B03FA28C5759900FBBB32 /* AddDataViewController.swift in Sources */,
 				AB5B03DB28C3449A00FBBB32 /* SceneDelegate.swift in Sources */,
+				AB5B03FC28C5790600FBBB32 /* PhoneDataTableViewCell.swift in Sources */,
 				AB5B03F828C51DE600FBBB32 /* PhoneBook.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

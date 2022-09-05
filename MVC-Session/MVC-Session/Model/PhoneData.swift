@@ -7,8 +7,14 @@
 
 import Foundation
 
-struct PhoneData: Equatable, Hashable {
+@objc class PhoneData: NSObject {
     var name: String
     var number: String
     var company: String?
+    
+    init(name: String, number: String, _ company: String?) {
+        self.name = name
+        self.number = number
+        self.company = company
+    }
 }

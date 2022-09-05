@@ -8,34 +8,46 @@
 import UIKit
 
 final class PhoneBookViewController: UIViewController {
-    
     lazy private var phoneBook = PhoneBook()
-    private var phoneDataList: PhoneDataListTableView!
-    private var listOptionButton: UIButton!
-    private var addDataButton: UIButton!
+    private var dataTableView: UITableView!
+    private var observer: NSKeyValueObservation!
+    private var listOptionButton: MainFloatingButton!
+    private var addDataButton: MainFloatingButton!
+    lazy private var datas: [PhoneData] = [] {
+        willSet {
+            dataTableView.reloadData()
+        }
+    }
     private var currentOption: OrderingOption = .name {
-        didSet(newVal) {
-            switch newVal {
+        didSet {
+            switch currentOption {
             case .name:
-                listOptionButton.setTitle("이름", for: .normal)
+                listOptionButton.setTitle("Name", for: .normal)
+                datas = phoneBook.getPhoneDatasOrder(by: self.currentOption)
             case .company:
-                listOptionButton.setTitle("회사", for: .normal)
+                listOptionButton.setTitle("Company", for: .normal)
+                datas = phoneBook.getPhoneDatasOrder(by: self.currentOption)
             }
         }
     }
     
     override func loadView() {
         super.loadView()
-        phoneDataList = PhoneDataListTableView()
-        listOptionButton = UIButton()
-        addDataButton = UIButton()
+        dataTableView = UITableView()
+        listOptionButton = MainFloatingButton(title: "Name")
+        addDataButton = MainFloatingButton(title: "Add")
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setPhoneDataList()
+        self.navigationItem.title = "NameBook"
+        setDataTableView()
         setListOptionButton()
         setAddDataButton()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        datas = phoneBook.getPhoneDatasOrder(by: currentOption)
     }
 }
 
@@ -44,18 +56,6 @@ private extension PhoneBookViewController {
         self.view.addSubview(listOptionButton)
         setListOptionButtonLayout()
         listOptionButton.addTarget(self, action: #selector(listOptionButtonAction), for: .touchUpInside)
-        listOptionButton.setTitle("이름", for: .normal)
-        listOptionButton.setTitleColor(.black, for: .normal)
-    }
-    
-    func setListOptionButtonLayout() {
-        listOptionButton.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            listOptionButton.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -100),
-            listOptionButton.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
-            listOptionButton.widthAnchor.constraint(equalToConstant: 200),
-            listOptionButton.heightAnchor.constraint(equalToConstant: 40)
-        ])
     }
     
     @objc func listOptionButtonAction(_ sender: UIButton) {
@@ -67,64 +67,85 @@ private extension PhoneBookViewController {
     }
 }
 
-private extension PhoneBookViewController {
-    func setAddDataButton() {
+extension PhoneBookViewController: AddDataViewDelegate {
+    private func setAddDataButton() {
         self.view.addSubview(addDataButton)
         setAddDataButtonLayout()
         addDataButton.addTarget(self, action: #selector(AddDataButtonAction), for: .touchUpInside)
-        addDataButton.setTitle("추가", for: .normal)
-        addDataButton.setTitleColor(.black, for: .normal)
     }
     
-    func setAddDataButtonLayout() {
-        addDataButton.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            addDataButton.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -100),
-            addDataButton.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
-            addDataButton.widthAnchor.constraint(equalToConstant: 200),
-            addDataButton.heightAnchor.constraint(equalToConstant: 40)
-        ])
+    @objc private func AddDataButtonAction(_ sender: UIButton) {
+        if let controller = self.storyboard?.instantiateViewController(withIdentifier: "addDataView") as? AddDataViewController {
+            controller.delegate = self
+            self.navigationController?.pushViewController(controller, animated: true)
+        }
     }
     
-    @objc func AddDataButtonAction(_ sender: UIButton) {
-        phoneBook.setNewPhoneData(name: "someone", number: "010-1234-5678", company: "ADA")
+    func addDataAtForm(data: PhoneData) {
+        phoneBook.setNewPhoneData(name: data.name, number: data.number, company: data.company)
     }
 }
 
-extension PhoneBookViewController: PhoneDataListTableViewDelegate {
-    private func setPhoneDataList() {
-        phoneDataList.ownDelegate = self
-        phoneDataList.delegate = self
-        self.view.addSubview(phoneDataList)
-        setPhoneDataListLayout()
+extension PhoneBookViewController {
+    private func setDataTableView() {
+        dataTableView.dataSource = self
+        dataTableView.register(PhoneDataTableViewCell.classForCoder(), forCellReuseIdentifier: "dataCell")
+        self.view.addSubview(dataTableView)
+        setDataTableViewLayout()
+        setPhoneBookObserverToDataTableView()
     }
     
-    private func setPhoneDataListLayout() {
-        phoneDataList.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            phoneDataList.topAnchor.constraint(equalTo: self.view.topAnchor),
-            phoneDataList.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
-            phoneDataList.bottomAnchor.constraint(equalTo: self.view.bottomAnchor),
-            phoneDataList.trailingAnchor.constraint(equalTo: self.view.trailingAnchor)
-        ])
+    private func setPhoneBookObserverToDataTableView() {
+        observer = phoneBook.observe(\.phoneDatas, options: .new) { (data, change) in
+            self.datas = self.phoneBook.getPhoneDatasOrder(by: self.currentOption)
+        }
     }
-}
-
-extension PhoneBookViewController: UITableViewDelegate {
-    
 }
 
 extension PhoneBookViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return datas.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let data = datas[indexPath.row]
+        let cell = dataTableView.dequeueReusableCell(withIdentifier: "dataCell") as? PhoneDataTableViewCell ?? UITableViewCell()
+        
+        (cell as? PhoneDataTableViewCell)?.nameLabel.text = data.name
+        (cell as? PhoneDataTableViewCell)?.numberLabel.text = data.number
+        (cell as? PhoneDataTableViewCell)?.companyLabel.text = data.company
+        return cell
     }
-    
-    
 }
 
-
-
+private extension PhoneBookViewController {
+    func setAddDataButtonLayout() {
+        addDataButton.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            addDataButton.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -100),
+            addDataButton.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -20),
+            addDataButton.widthAnchor.constraint(equalToConstant: 100),
+            addDataButton.heightAnchor.constraint(equalToConstant: 40)
+        ])
+    }
+    
+    func setListOptionButtonLayout() {
+        listOptionButton.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            listOptionButton.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -100),
+            listOptionButton.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 20),
+            listOptionButton.widthAnchor.constraint(equalToConstant: 100),
+            listOptionButton.heightAnchor.constraint(equalToConstant: 40)
+        ])
+    }
+    
+    func setDataTableViewLayout() {
+        dataTableView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            dataTableView.topAnchor.constraint(equalTo: self.view.topAnchor),
+            dataTableView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
+            dataTableView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor),
+            dataTableView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor)
+        ])
+    }
+}
