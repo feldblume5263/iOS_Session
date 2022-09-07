@@ -14,7 +14,7 @@ final class PhoneBookViewController: UIViewController {
     private var listOptionButton: MainFloatingButton!
     private var addDataButton: MainFloatingButton!
     lazy private var datas: [PhoneData] = [] {
-        willSet {
+        didSet {
             dataTableView.reloadData()
         }
     }
@@ -96,7 +96,7 @@ extension PhoneBookViewController {
     }
     
     private func setPhoneBookObserverToDataTableView() {
-        observer = phoneBook.observe(\.phoneDatas, options: .new) { (data, change) in
+        observer = phoneBook.observe(\.phoneDatas) { (data, change) in
             self.datas = self.phoneBook.getPhoneDatasOrder(by: self.currentOption)
         }
     }

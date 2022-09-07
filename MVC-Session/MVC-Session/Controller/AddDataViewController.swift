@@ -44,6 +44,7 @@ private extension AddDataViewController {
             let number = numberTextField.text ?? ""
             if name.count > .zero && number.count > .zero {
                 delegate.addDataAtForm(data: PhoneData(name: name, number: number, companyTextField.text))
+                _ = navigationController?.popViewController(animated: true)
             } else {
                 let sheet = UIAlertController(title: "Data Error", message: "you need name and number", preferredStyle: .alert)
                 sheet.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in  }))

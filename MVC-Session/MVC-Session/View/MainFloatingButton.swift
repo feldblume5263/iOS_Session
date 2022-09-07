@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MainFloatingButton: UIButton {
+final class MainFloatingButton: UIButton {
     
     init(title: String) {
         super.init(frame: CGRect(origin: .zero, size: .zero))
