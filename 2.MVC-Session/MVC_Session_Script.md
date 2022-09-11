@@ -14,7 +14,7 @@ MVC 아키텍처는 UIKit 에서 기본적으로 쓰이는 아키텍처이고, �
 
 <br>
 
-[MVC_PhoneBook]([iOS_Session/2.MVC-Session at main · feldblume5263/iOS_Session · GitHub](https://github.com/feldblume5263/iOS_Session/tree/main/2.MVC-Session)
+[MVC_PhoneBook](https://github.com/feldblume5263/iOS_Session/tree/main/2.MVC-Session)
 
 <br>
 
