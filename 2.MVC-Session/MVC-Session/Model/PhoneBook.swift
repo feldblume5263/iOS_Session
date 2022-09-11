@@ -12,7 +12,7 @@ enum OrderingOption {
     case company
 }
 
-@objc final class PhoneBook: NSObject {
+final class PhoneBook: NSObject {
     @objc dynamic var phoneDatas = Set<PhoneData>()
     
     override init() {
