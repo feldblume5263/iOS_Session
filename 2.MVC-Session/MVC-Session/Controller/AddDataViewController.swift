@@ -15,7 +15,7 @@ final class AddDataViewController: UIViewController {
     private var nameTextField: UITextField!
     private var numberTextField: UITextField!
     private var companyTextField: UITextField!
-    weak var delegate: AddDataViewDelegate?
+    weak var delegate: AddDataViewDelegate? = nil
     
     override func loadView() {
         super.loadView()

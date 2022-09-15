@@ -97,7 +97,9 @@ extension PhoneBookViewController {
     
     private func setPhoneBookObserverToDataTableView() {
         observer = phoneBook.observe(\.phoneDatas) { (data, change) in
+            //
             self.datas = self.phoneBook.getPhoneDatasOrder(by: self.currentOption)
+            //
         }
     }
 }
