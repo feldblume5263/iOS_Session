@@ -25,6 +25,8 @@
 
 #### [예제 코드를 기반으로 한 MVC 세션](https://github.com/feldblume5263/iOS_Session/blob/main/2.MVC-Session/MVC_Session_Script.md)
 
+#### [클론 코딩 과제](https://github.com/feldblume5263/iOS_Session/blob/main/2.MVC-Session/Assignment.md)
+
 <br>
 
 ----
