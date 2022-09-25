@@ -7,23 +7,39 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B57AF6A528DABD39003C291E /* MemoFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57AF6A428DABD39003C291E /* MemoFooterView.swift */; };
+		B590CB3D28D59F9C00F120D0 /* OptionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B590CB3C28D59F9C00F120D0 /* OptionListViewController.swift */; };
+		B59D470528DC402A003801E6 /* OptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59D470428DC402A003801E6 /* OptionTableViewCell.swift */; };
+		B5B92CBF28D8094E00564EB7 /* AddMemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B92CBE28D8094E00564EB7 /* AddMemoViewController.swift */; };
+		B5D1757D28D81A1A007429AF /* MemoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D1757C28D81A1A007429AF /* MemoCollectionViewCell.swift */; };
 		B5E6A3E928D3436E0071D6E7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E6A3E828D3436E0071D6E7 /* AppDelegate.swift */; };
 		B5E6A3EB28D3436E0071D6E7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E6A3EA28D3436E0071D6E7 /* SceneDelegate.swift */; };
-		B5E6A3ED28D3436E0071D6E7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E6A3EC28D3436E0071D6E7 /* ViewController.swift */; };
+		B5E6A3ED28D3436E0071D6E7 /* MemoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E6A3EC28D3436E0071D6E7 /* MemoListViewController.swift */; };
 		B5E6A3F028D3436E0071D6E7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5E6A3EE28D3436E0071D6E7 /* Main.storyboard */; };
 		B5E6A3F228D3436F0071D6E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5E6A3F128D3436F0071D6E7 /* Assets.xcassets */; };
 		B5E6A3F528D3436F0071D6E7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5E6A3F328D3436F0071D6E7 /* LaunchScreen.storyboard */; };
+		B5E6A3FE28D344D10071D6E7 /* Memo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E6A3FD28D344D10071D6E7 /* Memo.swift */; };
+		B5E6A40328D369C90071D6E7 /* MemoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E6A40228D369C90071D6E7 /* MemoItem.swift */; };
+		B5ED745628DB2C910058EABE /* Option.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5ED745528DB2C910058EABE /* Option.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B57AF6A428DABD39003C291E /* MemoFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoFooterView.swift; sourceTree = "<group>"; };
+		B590CB3C28D59F9C00F120D0 /* OptionListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionListViewController.swift; sourceTree = "<group>"; };
+		B59D470428DC402A003801E6 /* OptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionTableViewCell.swift; sourceTree = "<group>"; };
+		B5B92CBE28D8094E00564EB7 /* AddMemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMemoViewController.swift; sourceTree = "<group>"; };
+		B5D1757C28D81A1A007429AF /* MemoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoCollectionViewCell.swift; sourceTree = "<group>"; };
 		B5E6A3E528D3436E0071D6E7 /* SimpleMemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleMemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5E6A3E828D3436E0071D6E7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5E6A3EA28D3436E0071D6E7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B5E6A3EC28D3436E0071D6E7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B5E6A3EC28D3436E0071D6E7 /* MemoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoListViewController.swift; sourceTree = "<group>"; };
 		B5E6A3EF28D3436E0071D6E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B5E6A3F128D3436F0071D6E7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B5E6A3F428D3436F0071D6E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B5E6A3F628D3436F0071D6E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5E6A3FD28D344D10071D6E7 /* Memo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memo.swift; sourceTree = "<group>"; };
+		B5E6A40228D369C90071D6E7 /* MemoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoItem.swift; sourceTree = "<group>"; };
+		B5ED745528DB2C910058EABE /* Option.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Option.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +53,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B590CB3428D4AFFA00F120D0 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B5E6A3EC28D3436E0071D6E7 /* MemoListViewController.swift */,
+				B590CB3C28D59F9C00F120D0 /* OptionListViewController.swift */,
+				B5B92CBE28D8094E00564EB7 /* AddMemoViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		B590CB3528D4B00C00F120D0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B5D1757C28D81A1A007429AF /* MemoCollectionViewCell.swift */,
+				B57AF6A428DABD39003C291E /* MemoFooterView.swift */,
+				B59D470428DC402A003801E6 /* OptionTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		B5E6A3DC28D3436E0071D6E7 = {
 			isa = PBXGroup;
 			children = (
@@ -56,15 +92,35 @@
 		B5E6A3E728D3436E0071D6E7 /* SimpleMemo */ = {
 			isa = PBXGroup;
 			children = (
+				B5E6A3FF28D3460D0071D6E7 /* Extensions */,
+				B5E6A3FC28D344C50071D6E7 /* Models */,
+				B590CB3528D4B00C00F120D0 /* Views */,
+				B590CB3428D4AFFA00F120D0 /* Controllers */,
 				B5E6A3E828D3436E0071D6E7 /* AppDelegate.swift */,
 				B5E6A3EA28D3436E0071D6E7 /* SceneDelegate.swift */,
-				B5E6A3EC28D3436E0071D6E7 /* ViewController.swift */,
 				B5E6A3EE28D3436E0071D6E7 /* Main.storyboard */,
 				B5E6A3F128D3436F0071D6E7 /* Assets.xcassets */,
 				B5E6A3F328D3436F0071D6E7 /* LaunchScreen.storyboard */,
 				B5E6A3F628D3436F0071D6E7 /* Info.plist */,
 			);
 			path = SimpleMemo;
+			sourceTree = "<group>";
+		};
+		B5E6A3FC28D344C50071D6E7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B5E6A3FD28D344D10071D6E7 /* Memo.swift */,
+				B5E6A40228D369C90071D6E7 /* MemoItem.swift */,
+				B5ED745528DB2C910058EABE /* Option.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B5E6A3FF28D3460D0071D6E7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +194,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B5E6A3ED28D3436E0071D6E7 /* ViewController.swift in Sources */,
+				B5D1757D28D81A1A007429AF /* MemoCollectionViewCell.swift in Sources */,
+				B5E6A3ED28D3436E0071D6E7 /* MemoListViewController.swift in Sources */,
+				B5B92CBF28D8094E00564EB7 /* AddMemoViewController.swift in Sources */,
+				B5ED745628DB2C910058EABE /* Option.swift in Sources */,
+				B5E6A40328D369C90071D6E7 /* MemoItem.swift in Sources */,
 				B5E6A3E928D3436E0071D6E7 /* AppDelegate.swift in Sources */,
 				B5E6A3EB28D3436E0071D6E7 /* SceneDelegate.swift in Sources */,
+				B590CB3D28D59F9C00F120D0 /* OptionListViewController.swift in Sources */,
+				B57AF6A528DABD39003C291E /* MemoFooterView.swift in Sources */,
+				B59D470528DC402A003801E6 /* OptionTableViewCell.swift in Sources */,
+				B5E6A3FE28D344D10071D6E7 /* Memo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
