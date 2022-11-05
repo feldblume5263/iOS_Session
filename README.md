@@ -3,7 +3,7 @@
 
 <br>
 
-## UIKit Basic - 1 Session  (2022.09.06)
+## UIKit Basic - 1 Session
 
 #### [세션 키노트](https://github.com/feldblume5263/iOS_Session/blob/main/220906-Session1.pdf)
 
@@ -19,7 +19,7 @@
 
 ----
 
-## MVC Session  (2022.09.06)
+## MVC Session
 
 #### [MVC 예제 코드 - PhoneBook](https://github.com/feldblume5263/iOS_Session/tree/main/2.MVC-Session)
 
