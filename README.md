@@ -3,7 +3,7 @@
 
 <br>
 
-## UIKit Basic - 1 Session
+## UIKit Basic Session
 
 #### [세션 키노트](https://github.com/feldblume5263/iOS_Session/blob/main/220906-Session1.pdf)
 
