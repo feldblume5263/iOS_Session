@@ -27,9 +27,10 @@
 앱을 껐다가 켜도 DB는 유지되어야 해요!!  
 JSON 파일에 읽고 쓰는 방법을 가장 추천드리고, 그 외에는 CoreData, Realm, ICloud, 개인서버 등에 저장하는 방법이 있을 것 같아요
 
-
+<p>
 <img width="300" src="https://user-images.githubusercontent.com/53016167/190380931-1f53ed86-11c2-4a21-a7e8-be59e1a9457c.png">
 <img width="300" src="https://user-images.githubusercontent.com/53016167/190380929-146ce325-7236-4b34-b326-d6b213cd535f.png">
 <img width="300" src="https://user-images.githubusercontent.com/53016167/190380924-22904e55-22aa-439b-9e44-a4988cffdd33.png">
 <img width="300" src="https://user-images.githubusercontent.com/53016167/190380915-56697aa5-cbce-4270-b176-0ccee7f7d581.png">
+<\p>
 
