@@ -7,6 +7,7 @@
 
 
 
+
 프로젝트에 대해서 설명하면  
 메인화면은 옵션에 따라 두가지로 나뉘는데.  
 **첫 번째로 Table View를 사용한 리스트 형식과, 두 번째로 Collection View를 사용한 갤러리 형식이 있습니다.**  
@@ -27,13 +28,8 @@
 JSON 파일에 읽고 쓰는 방법을 가장 추천드리고, 그 외에는 CoreData, Realm, ICloud, 개인서버 등에 저장하는 방법이 있을 것 같아요
 
 
+<img width="300" src="https://user-images.githubusercontent.com/53016167/190380931-1f53ed86-11c2-4a21-a7e8-be59e1a9457c.png">
+<img width="300" src="https://user-images.githubusercontent.com/53016167/190380929-146ce325-7236-4b34-b326-d6b213cd535f.png">
+<img width="300" src="https://user-images.githubusercontent.com/53016167/190380924-22904e55-22aa-439b-9e44-a4988cffdd33.png">
+<img width="300" src="https://user-images.githubusercontent.com/53016167/190380915-56697aa5-cbce-4270-b176-0ccee7f7d581.png">
 
-
-
-![1 main_1 (1)](https://user-images.githubusercontent.com/53016167/190380931-1f53ed86-11c2-4a21-a7e8-be59e1a9457c.png)
-
-![2 main_2 (1)](https://user-images.githubusercontent.com/53016167/190380929-146ce325-7236-4b34-b326-d6b213cd535f.png)
-
-![3 option (1)](https://user-images.githubusercontent.com/53016167/190380924-22904e55-22aa-439b-9e44-a4988cffdd33.png)
-
-![4 addMemo (1)](https://user-images.githubusercontent.com/53016167/190380915-56697aa5-cbce-4270-b176-0ccee7f7d581.png)
