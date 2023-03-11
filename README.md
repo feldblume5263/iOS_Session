@@ -11,7 +11,7 @@
 
 #### 2-1. [AppDelegate, SceneDelegate](https://github.com/feldblume5263/iOS_Session/blob/main/1.Basic_Session_1/2-1.%20UIkit%EA%B5%AC%EC%84%B1.md)
 
-#### 2-2. [@main과 StoryBoard, ViewControlle](https://github.com/feldblume5263/iOS_Session/blob/main/1.Basic_Session_1/2-2.%20UIkit%EA%B5%AC%EC%84%B1.md)
+#### 2-2. [@main과 StoryBoard, ViewController](https://github.com/feldblume5263/iOS_Session/blob/main/1.Basic_Session_1/2-2.%20UIkit%EA%B5%AC%EC%84%B1.md)
 
 #### 3. [Veiw Life cycle](https://github.com/feldblume5263/iOS_Session/blob/main/1.Basic_Session_1/3.%20View%20LifeCycle.md)
 
