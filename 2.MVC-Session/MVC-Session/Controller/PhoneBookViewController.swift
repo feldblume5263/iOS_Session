@@ -41,13 +41,10 @@ final class PhoneBookViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = "NameBook"
+        datas = phoneBook.getPhoneDatasOrder(by: currentOption)
         setDataTableView()
         setListOptionButton()
         setAddDataButton()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        datas = phoneBook.getPhoneDatasOrder(by: currentOption)
     }
 }
 
